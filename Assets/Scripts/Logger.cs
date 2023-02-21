@@ -15,6 +15,6 @@ public class Logger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(5.0f, 100.0f, 1.0f);
+        //transform.Translate(5.0f, 100.0f, 1.0f);
     }
 }
