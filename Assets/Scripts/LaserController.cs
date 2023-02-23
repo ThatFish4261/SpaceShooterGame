@@ -8,7 +8,7 @@ public class LaserController : MonoBehaviour
 
     private Vector3 endTranslationPosition;
 
-    private float speed = 0.5f;
+    public float speed = 1.5f;
     private float timeToDestroy = 2f;
 
     // Start is called before the first frame update
