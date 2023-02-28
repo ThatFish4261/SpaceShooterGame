@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0474f55102af6334e9aec4adcd7b257c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1.5
 --- !u!1 &8301004362533452689
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -187,3 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0474f55102af6334e9aec4adcd7b257c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1.5

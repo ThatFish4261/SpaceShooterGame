@@ -6,15 +6,12 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float spawnInterval = 3f;
-    public Vector3 spawnPosition;
-    public float spawnRadius = 5f;
-
 
     private float timeSinceLastSpawn = 0f;
 
     private void Start()
     {
-
+        
     }
 
     void Update()
@@ -23,8 +20,13 @@ public class EnemySpawner : MonoBehaviour
 
         if (timeSinceLastSpawn >= spawnInterval)
         {
-            // Reset the spawn timer
             timeSinceLastSpawn = 0f;
+
+            // Randomize the spawn position
+            float x = Random.Range(-12.35f, 13f);
+            float y = 11.46f;
+            float z = 0.0f;
+            Vector3 spawnPosition = new Vector3(x, y, z);
 
             // Instantiate a new enemy ship and set its position
             GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);

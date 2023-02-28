@@ -6,6 +6,7 @@ TagManager:
   tags:
   - laser
   - enemy
+  - spawn
   layers:
   - Default
   - TransparentFX

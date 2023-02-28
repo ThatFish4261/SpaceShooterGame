@@ -6,8 +6,9 @@ public class EnemyController : MonoBehaviour
 {
 
     public GameObject enemyShip;
-    public float enemySpeed = 2.0f;
+    public float enemySpeed = 15;
     public int enemyHealth = 10;
+    public int damage = 2;
 
     void Update()
     {
@@ -15,7 +16,7 @@ public class EnemyController : MonoBehaviour
         transform.Translate(Vector3.down * enemySpeed * Time.deltaTime);
 
         // If the ship falls off the screen, destroy it
-        if (transform.position.y < -10f)
+        if (transform.position.y < -8f)
         {
             Destroy(gameObject);
         }
@@ -32,17 +33,12 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "laser")
         {
-            print("hit");
-        }
-
-        if (other.gameObject.tag == "enemy")
-        {
-            print("hit");
+            Destroy(gameObject);
         }
     }
+
 }
