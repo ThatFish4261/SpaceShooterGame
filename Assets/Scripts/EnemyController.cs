@@ -39,6 +39,19 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.tag == "theWall")
+        {
+            Destroy(gameObject);
+            PlayerController.playerHealth -= 10;
+        }
+
+        if (other.gameObject.tag == "wowie")
+        {
+            Destroy(gameObject);
+            PlayerController.playerHealth -= 20;
+        }
+
     }
 
 }

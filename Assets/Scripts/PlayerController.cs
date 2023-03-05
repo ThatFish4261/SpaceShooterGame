@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
 
     public GameObject laserPrefab;   // The prefab of the laser to shoot
-    public float fireRate = 0.5f;    // The rate at which the player can shoot (in seconds)
-    private float nextFire = 0.0f;   // The time of the next allowed shot
+    public static float fireRate = 0.5f;    // The rate at which the player can shoot (in seconds)
+    public static float nextFire = 0.0f;   // The time of the next allowed shot
 
     // This component will handle player action and state
-    public int health = 100;
+    public static double playerHealth = 100;
     public float speed = 5.0f;
 
     //Player Limits variables
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         transform.position = Vector3.zero;
+        playerHealth = 100;
     }
 
     // Update is called once per frame
@@ -55,6 +57,11 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + fireRate;  // Set the time of the next allowed shot
             GameObject laserClone = Instantiate(laserPrefab, transform.position, Quaternion.identity);  // Create a new laser prefab at the player's position
             StartCoroutine(DestroyLaserClone(laserClone, 1.0f));  // Start coroutine to destroy laser clone after 2 seconds
+        }
+
+        if (playerHealth <= 0)
+        {
+            GetComponent<EndHandler>().ProcessEnd();
         }
     }
     IEnumerator DestroyLaserClone(GameObject clone, float time = 0.1f)

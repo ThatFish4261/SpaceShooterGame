@@ -53,6 +53,7 @@ public class LaserController : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             Destroy(gameObject);
+            PlayerController.playerHealth += 1;
         }
     }
 
