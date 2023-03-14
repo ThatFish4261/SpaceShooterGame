@@ -8,7 +8,7 @@ public class LaserController : MonoBehaviour
 
     private Vector3 endTranslationPosition;
 
-    public float speed = 1.5f;
+    public float speed = 2.5f;
     private float timeToDestroy = 2f;
 
     // Start is called before the first frame update
@@ -53,10 +53,7 @@ public class LaserController : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             Destroy(gameObject);
-            PlayerController.playerHealth += 1;
+            PlayerController.playerHealth += 2;
         }
     }
-
-
-
 }

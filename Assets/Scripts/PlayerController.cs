@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public static float nextFire = 0.0f;   // The time of the next allowed shot
 
     // This component will handle player action and state
-    public static double playerHealth = 100;
+    public static float playerHealth = 100;
     public float speed = 5.0f;
 
     //Player Limits variables
@@ -61,7 +61,12 @@ public class PlayerController : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            GetComponent<EndHandler>().ProcessEnd();
+            GetComponent<SessionHandler>().ProcessEnd();
+        }
+
+        if (playerHealth >= 200)
+        {
+            GetComponent<SessionHandler>().ProcessEnd();
         }
     }
     IEnumerator DestroyLaserClone(GameObject clone, float time = 0.1f)
