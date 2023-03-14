@@ -12,4 +12,4 @@ This game is a basic space shooter game made in the Unity 3D engine.
 
 ## Other Info
 * This game was made in Game-135 at Azusa Pacific University
-* The music in the game is from [here](https://www.youtube.com/watch?v=X3p8P6-fWyA&t=1192s&ab_channel=Nez).
+* The music in the game is from [here](https://youtu.be/X3p8P6-fWyA).
