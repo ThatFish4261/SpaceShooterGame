@@ -10,3 +10,6 @@ This game is a basic space shooter game made in the Unity 3D engine.
 * If an enemy ship hits you, you lose 20 health.
 * If an enemy ship goes off the bottom of the screen, you lose 10 health.
 
+## Other Info
+* This game was made in Game-135 at Azusa Pacific University
+* The music in the game is from [here](https://www.youtube.com/watch?v=X3p8P6-fWyA&t=1192s&ab_channel=Nez).
